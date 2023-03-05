@@ -1,23 +1,34 @@
-let string = "";
+let String = "";
 let buttons = document.querySelectorAll('button');
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click', (e)=>{
         if(e.target.innerHTML === '='){
-            string = eval(string).toFixed(4);
-            document.querySelector('.input-design').value = string;
+            try{
+                String = eval(String);
+                if (Number.isInteger(String) === false) {
+                    String = eval(String).toFixed(4);
+                    document.querySelector('.input-design').value = String;
+                }
+                else{
+                    document.querySelector('.input-design').value = String; 
+                } 
+            }
+            catch(err){
+                console.log(err);
+            }
         }
         else if(e.target.innerHTML === 'C'){
-            string = "";
-            document.querySelector('.input-design').value = string;
+            String = "";
+            document.querySelector('.input-design').value = String;
         }
         else if(e.target.innerHTML === 'DEL'){
-            string= string.slice(0,-1);
-            document.querySelector('.input-design').value = string;
+            String= String.slice(0,-1);
+            document.querySelector('.input-design').value = String;
         }
         else{
             console.log(e.target)
-            string = string + e.target.innerHTML;
-            document.querySelector('.input-design').value = string; 
+            String = String + e.target.innerHTML;
+            document.querySelector('.input-design').value = String; 
         }
         
     })
