@@ -1,10 +1,12 @@
+body{
+        height: 100vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
 .calculator{
-    position: absolute;
-    top: 50%;
-    left: 50%;
     padding : 20px;
-    margin-top: 50px;
-    transform: translate(-50%, -50%);
     height: auto;
     width : auto;
     background: #000;
@@ -27,6 +29,8 @@
     margin: 0 4px;
 }
 .row{
+    display: flex;
+    justify-content: center;
     margin: 6px 0;
 }
 .input-design{
@@ -41,4 +45,8 @@
 }
 .btn-mustered{
     background: rgb(246, 153, 6);
+    font-size: 30px;
+}
+.btn-expand{
+    padding :16px 73px;
 }

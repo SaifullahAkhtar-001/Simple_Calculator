@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100px;
+
+}
+.subcontainer{
+    background: lightpink;
+}
+.subcontainer2{
+    background: red;
+}
