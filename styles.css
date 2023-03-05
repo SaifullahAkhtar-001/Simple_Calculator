@@ -1,4 +1,6 @@
 body{
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Slab', serif;
         height: 100vh;
         width: auto;
         display: flex;
@@ -9,7 +11,7 @@ body{
     padding : 20px;
     height: auto;
     width : auto;
-    background: #000;
+    background: #1a1a1a;
     border: none;
     border-radius: 30px;
 }
@@ -21,12 +23,16 @@ body{
     margin-top: 20px;
 }
 .button{
+    cursor: pointer;
+    background: #333333;
+    color: white;
+    font-size: 30px;
     width: 70px;
     height: 70px;
     padding :16px 20px;
     border-radius: 35px;
     border: none;
-    margin: 0 4px;
+    margin: 0 6px;
 }
 .row{
     display: flex;
@@ -34,19 +40,35 @@ body{
     margin: 6px 0;
 }
 .input-design{
+    padding: 0 30px;
+    text-align: end;
+    font-size: 50px;
     color: white;
     pointer-events: none;
-    width: 317px;
+    width: 272px;
     height: 150px;
     border: none;
     border-radius: 19px;
     background: #313131;
-
+    resize: none;
+}
+.btn-lightgrey{
+    background: #a5a5a5;
+    color: #000;
+}
+.del-btn{
+    padding-left: 2px;
+    padding-right: 0px;
 }
 .btn-mustered{
     background: rgb(246, 153, 6);
     font-size: 30px;
 }
 .btn-expand{
-    padding :16px 73px;
+    padding: 16px 25px;
+    width: 149px;
+    text-align: start;
+}
+.btn-decimal{
+    font-weight: bolder;
 }
