@@ -3,14 +3,19 @@ let buttons = document.querySelectorAll('button');
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click', (e)=>{
         if(e.target.innerHTML === '='){
-            String = eval(String);
-            if (Number.isInteger(String) === false) {
-                String = eval(String).toFixed(4);
-                document.querySelector('.input-design').value = String;
+            try{
+                String = eval(String);
+                if (Number.isInteger(String) === false) {
+                    String = eval(String).toFixed(4);
+                    document.querySelector('.input-design').value = String;
+                }
+                else{
+                    document.querySelector('.input-design').value = String; 
+                } 
             }
-            else{
-                document.querySelector('.input-design').value = String; 
-            } 
+            catch(error){
+                document.querySelector('.input-design').value = ('Error');
+            }
         }
         else if(e.target.innerHTML === 'C'){
             String = "";
